@@ -18,4 +18,6 @@ https://raw.githubusercontent.com/lerocha/chinook-database/master/ChinookDatabas
     - Update Aaron Mitchell in Customer table to Robert Walter
     - Update name of artist in the Artist table “Creedence Clearwater Revival” to “CCR”
 
-Save all of your queries/commands in an sql file and push it to your exercise repo. 
+Save all of your queries/commands in a separate sql file and push it to your exercise repo. 
+
+In DBeaver, you can click File -> Save As to see where your scripts are saved on your computer
