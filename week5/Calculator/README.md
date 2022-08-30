@@ -4,7 +4,7 @@ You will utilize git branching to push your code.
 In git bash, create and checkout your branch:
 
 ```
-git branch -b <your-name>
+git checkout -b <your-name>
 ```
 
 Work on the project, make your changes. 
