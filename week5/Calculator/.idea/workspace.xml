@@ -5,8 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1701e15c-c110-4690-833d-852d2ceb4a77" name="Changes" comment="">
-
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/basement/laundry-room/trash1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/basement/laundry-room/trash2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/basement/laundry-room/treasure1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/basement/storage/trash3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/basement/storage/treasure2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor0/bathroom/cabinet/trasure" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor0/kitchen/fridge/trash4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor0/kitchen/fridge/trash5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor0/kitchen/fridge/trasure4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor0/kitchen/pantry/trash6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor0/living-room/bookshelf/trash7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor0/living-room/bookshelf/trasure5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor1/balcony/trash10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor1/balcony/trash11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor1/bedroom1/closet/trash8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor1/bedroom1/closet/trash9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor1/bedroom1/toy-chest/trasure6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor1/bedroom2/closet/treasure7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor2/storage/box1/trash12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor2/storage/box1/trash13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor2/storage/box1/trash14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor2/storage/box2/treasure8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor2/storage/box3/trash15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/unix_exercise/house/floor2/storage/box3/treasure9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +58,117 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
-
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="JUnit.CalculatorTest">
+    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.testDivide" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="METHOD_NAME" value="testDivide" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.testIsEven" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="METHOD_NAME" value="testIsEven" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.testIsEvenTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="METHOD_NAME" value="testIsEvenTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.testIsOdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="METHOD_NAME" value="testIsOdd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CalculatorTest" />
+        <item itemvalue="JUnit.CalculatorTest.testIsOdd" />
+        <item itemvalue="JUnit.CalculatorTest.testIsEvenTrue" />
+        <item itemvalue="JUnit.CalculatorTest.testIsEven" />
+        <item itemvalue="JUnit.CalculatorTest.testDivide" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,5 +190,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CalculatorTest_java$CalculatorTest.ic" NAME="CalculatorTest Coverage Results" MODIFIED="1661985016544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
   </component>
 </project>
