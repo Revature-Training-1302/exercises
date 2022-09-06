@@ -16,3 +16,5 @@ git commit -m "Finished exercised."
 git push origin <branch-name>
 ```
 
+## IMPORTANT ONLY PUSH TO YOUR OWN BRANCH
+
