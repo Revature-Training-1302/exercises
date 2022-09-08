@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(252, 255, 217);
+   }
+  
+   body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
+  padding: 8px; background-color: #f1f1f1;
+  /* padding: 10px 20px 10px 20px; */
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+h1 {
+    color:black;
+    text-align: left;
+    margin-bottom: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table, th, td {
+
+
+    border:2px solid rgb(106, 14, 82);
+    text-align: center;
+    padding: 4px;
+    margin:2px;
+    width: 40%;
+    align-self: center;
+  }
+  .plans {
+    /* float:left; */
+    width: 30%;
+    padding: 0 10px;
+    display: block;
+    align-self: start;
+
+   
+  }
+  
+/* put cards side by side    float align the picture or the card */
+.card {
+    float: left;
+    width: 30%;
+    padding: 0 10px;
+    display: flex;
+    border:  grey;
+  }
+  .card-text,.card-title{
+    background-color: #f1f1f1;
+  }
+
+@media screen and (min-width: 600px) {
+  .body{
+    
+      background-color: rgb(216, 219, 183);
+    
+  }
+   /* Responsive columns */ 
+  }
+  .card {
+        
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the counter cards */
+  #card-body {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+
