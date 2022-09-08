@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(199, 224, 235);
+}
+p {
+  text-align: center;
+  color: rgb(50, 20, 20);
+  border-style: double;
+  border-width: 5px;
+  border-radius: 5px;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+table, th, td {
+  border: 1px solid;
+}
+label{
+    color: rgba(240, 13, 24, 0.993);
+}
