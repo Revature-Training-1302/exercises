@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemom</title>
+</head>
+<body>
+    <button id = 'btn'>Get Data</button>
+    <div id = 'result'></div>
+    <script>
+        
+        let button = document.getElementById('btn');
+        button.addEventListener('click', sendRequest);
+
+        function sendRequest() {
+           
+            const base_url = 'https://pokeapi.co/api/v2';
+            // const base_url = 'http://hp-api.herokuapp.com/api/characters';
+
+            let request = new XMLHttpRequest();
+
+            request.open('GET', `${base_url}/pokemon-species`, true);
+            // request.open('GET', base_url, true);
+
+            request.onreadystatechange = function() {
+                
+                if(this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    
+                    console.log(typeof this.responseText);
+
+                    var parsedResponse = JSON.parse(this.responseText);
+                    console.log(parsedResponse);
+                    console.log(typeof parsedResponse);
+
+
+                    var characters = parsedResponse.results;
+
+                    console.log(characters);
+
+                    let htmlText = '';
+                    for(const ability of characters) {
+                        htmlText += `<h1>${ability.name}</h1>`;
+                        htmlText += `<h1>${ability.url}</h1>`;
+                        // htmlText += `<h3>${ability.species}</h3>`;
+                        // htmlText += `<h3>${ability.gender}</h3>`;
+
+                    }
+                    document.getElementById('result').innerHTML = htmlText;
+
+
+                }
+            }
+
+            request.send();
+        }
+    </script>
+</body>
+</html>
