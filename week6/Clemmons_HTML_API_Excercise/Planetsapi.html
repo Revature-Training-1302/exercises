@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets</title>
+    <link  rel = "stylesheet" href = "style.css"/>
+
+</head>
+<body>
+    <button id = 'btn'>Get by XMLHttp</button>
+    <div id = 'result'></div>
+    <button id = "btn2">Get by fetch</button>
+    <div id = "result2"></div>
+    <script>
+        let button = document.getElementById('btn');
+        button.addEventListener('click', sendRequest);
+        function sendRequest() {
+            const base_url = 'https://swapi.dev/api/';
+            let request = new XMLHttpRequest();
+            request.open('GET', `${base_url}/planets`, true);
+
+            request.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    console.log(typeof this.responseText);
+                    var parsedResponse = JSON.parse(this.responseText);
+                    console.log(parsedResponse);
+                    console.log(typeof parsedResponse);
+                    var planets = parsedResponse.results;
+
+                    console.log(planets);
+                    let htmlText = '';
+                    for(const planet of planets) {
+                        htmlText += `<h1>Name: ${planet.name}</h1>`;
+                        htmlText += `<h2>Rotational Period: ${planet.rotation_period}</h2>`;
+                        htmlText += `<h3>Terrain: ${planet.terrain}</h3>`;
+                        htmlText += `<h4>Population: ${planet.population}</h4>`;
+
+                    }
+                    document.getElementById('result').innerHTML = htmlText;
+
+
+                }
+                
+            }
+
+            
+
+            request.send();
+        }
+        
+document.getElementById('btn2').addEventListener('click', getData2);
+
+function getData2() {
+    const base_url = 'https://swapi.dev/api/';
+    fetch(`${base_url}/planets`)
+    .then(response => response.json())
+    .then(data => {
+        var planets = data.results;
+        console.log(typeof planets);
+        let htmlText = '';
+            for(const planet of planets) {
+                htmlText += `<h1>Name: ${planet.name}</h1>`;
+                htmlText += `<h2>Rotational Period: ${planet.rotation_period}</h2>`;
+                htmlText += `<h3>Terrain: ${planet.terrain}</h3>`;
+                htmlText += `<h4>Population: ${planet.population}</h4>`;
+            }
+            document.getElementById('result').innerHTML = htmlText;
+        })
+        .catch(error => {
+                document.getElementById('result').innerHTML = `<h1 style = "color: red;">Something went wrong with the request</h1>`;
+                var p = document.createElement('p');
+                p.innerText = `<p>${error}</p>`
+                document.getElementById('result').appendChild(p);
+            });
+        }
+    </script>
+</body>
+</html>
