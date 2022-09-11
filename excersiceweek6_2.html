@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starwar starships</title>
+    <style>
+        body{
+            background-color:  #D6F599;
+        }
+        h1{
+            color: #112A46;
+        }
+        h3{
+            color: #28190E;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <button id="bt">Get Data</button>
+    <div id="result"></div>
+    <script>
+        let button = document.getElementById('bt');
+        button.addEventListener('click', sendRequest);
+
+        function sendRequest(){
+            const base_url = 'https://swapi.dev/api/';
+
+            let request = new XMLHttpRequest();
+
+            request.open('GET', `${base_url}/starships/`, true)
+
+            request.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+
+                    console.log(typeof this.responseText);
+                    var parsedResponse = JSON.parse(this.responseText);
+                    console.log(parsedResponse);
+                    console.log(typeof parsedResponse)
+
+                    var ships = parsedResponse.results;
+
+                    console.log(ships);
+
+                    let htmlText = '';
+                    for(const description of ships){
+                        htmlText += `<h1>${description.name}<h1>`;
+                        htmlText += `<h2>Model: <h2>`+`<h3>${description.model}<h3>`;
+                        htmlText += `<h2>Class: <h2>`+`<h3>${description.starship_class}<h3>`;
+                        htmlText += `<h2>Manufacturer: <h2>`+`<h3>${description.manufacturer}<h3>`;
+                        htmlText += `<h2>Crew: <h2>`+`<h3>${description.crew}<h3>`;
+
+                    }
+                    document.getElementById(`result`).innerHTML =htmlText;
+
+
+                }
+            }
+            request.send();
+        }
+    </script>
+</body>
+</html>
