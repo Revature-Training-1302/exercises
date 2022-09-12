@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter</title>
+</head>
+<body>
+    <button id = "btn">Get Information</button>
+    <div id ="result"></div>
+
+    <script>
+        let button = document.getElementById("btn");
+        button.addEventListener("click",sendRequest);
+
+        function sendRequest(){
+            const baseUrl = "https://mhw-db.com";
+
+            let request = new XMLHttpRequest();
+            request.open("GET", `${baseUrl}/monsters`, true);
+
+            request.onreadystatechange = function(){
+
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+                    console.log(typeof this.responseText); // this tells data type
+
+                    var parsedResponse = JSON.parse(this.responseText);
+                    console.log(parsedResponse);
+
+                    // var monsters = parsedResponse.results;
+                    // console.log(monsters);
+
+                    let htmlText ="";
+
+                    for(const monster of parsedResponse) {
+                        htmlText += `<h1>${monster.name}</h1>`;
+                        htmlText += `<h2>${monster.species}</h2>`;
+                        htmlText += `<h3>${monster.description}</h3>`;
+                    }
+
+                    document.getElementById("result").innerHTML = htmlText;
+
+                }
+
+            }
+            
+            request.send();
+        }
+
+    </script>
+    
+</body>
+</html>

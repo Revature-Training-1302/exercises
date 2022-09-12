@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "btn">Get Information</button>
+    <div id = "result"></div>
+
+    <script>
+        let button = document.getElementById("btn");
+        button.addEventListener("click", getInfo);
+
+        function getInfo(){
+            console.log("This is being called");
+            const baseUrl = "https://mhw-db.com";
+
+            fetch(`${baseUrl}/monsters`)
+            .then(response => response.json())
+            .then(data => {
+                //var monsters = data.result;
+
+                let htmlText = "";
+                
+                for(const i of data) {
+                    htmlText += `<h1>${i.name}</h1>`;
+                    htmlText += `<h2>${i.species}</h2>`;
+                    htmlText += `<h3>${i.description}</h3>`;
+                }
+
+                document.getElementById("result").innerHTML = htmlText;
+
+            })
+
+        }
+        
+    </script>
+    
+</body>
+</html>
