@@ -4,9 +4,14 @@
 * Sending requests using Fetch
  */
 
-div{
+div1{
     display: block;
     text-align: center;
+}
+
+div2 {
+    display: block;
+    text-align: left;
 }
 
 header {
