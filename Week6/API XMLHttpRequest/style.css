@@ -1,0 +1,26 @@
+/*
+* Abderrahim bahia
+* API Exercise Part II
+* Sending requests using Fetch
+ */
+
+.container{
+    display: block;
+}
+
+button{
+    margin-left: 10px;
+    width: 100px;
+}
+
+input{
+    text-align: center;
+}
+
+figure {
+    border: solid;
+    background-color: bisque;
+    border-color: black;
+    border-redius: 10px;
+}
+
