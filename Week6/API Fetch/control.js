@@ -23,6 +23,7 @@ function getData() {
             htmlText += `<li> <span>ISBN:</span> ${data.books[i]['isbn13']}</li>`;
             htmlText += `<li> <span>Price:</span> ${data.books[i]['price']}</li>`;
             htmlText += `<li> <span>URL:</span> <a href="${data.books[i]['url']}>${data.books[i]['title']}</a></li>`;
+            htmlText += `<li> <img src="${data.books[i]['image']}"></li>`;
             }
 
             document.getElementById('result').innerHTML = htmlText;
