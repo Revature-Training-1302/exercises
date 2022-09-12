@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemom</title>
+    <title>Star Wars starships</title>
 </head>
 <body>
     <button id = 'btn'>Get Data</button>
@@ -15,14 +15,13 @@
         button.addEventListener('click', sendRequest);
 
         function sendRequest() {
-           
-            const base_url = 'https://pokeapi.co/api/v2';
-            // const base_url = 'http://hp-api.herokuapp.com/api/characters';
+            const base_url = 'https://swapi.dev/api/';
+          
 
             let request = new XMLHttpRequest();
 
-            request.open('GET', `${base_url}/pokemon-species`, true);
-            // request.open('GET', base_url, true);
+            request.open('GET', `${base_url}/starships`, true);
+       
 
             request.onreadystatechange = function() {
                 
@@ -42,11 +41,9 @@
 
                     let htmlText = '';
                     for(const ability of characters) {
-                        htmlText += `<h1>${ability.name}</h1>`;
-                        htmlText += `<h1>${ability.url}</h1>`;
-                        // htmlText += `<h3>${ability.species}</h3>`;
-                        // htmlText += `<h3>${ability.gender}</h3>`;
-
+                        htmlText += `<h2>${ability.model}</h2>`;
+                        htmlText += `<h3 style="padding-left: 40px">${ability.cost_in_credits}</h3>`;
+                        htmlText += `<h3 style="padding-left: 40px">${ability.name}</h3>`;
                     }
                     document.getElementById('result').innerHTML = htmlText;
 

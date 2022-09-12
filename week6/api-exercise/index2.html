@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty</title>
+</head>
+<body>
+    <ul id = "character" style="font-size: 20px;">Rick and Morty Characters</ul>
+    <button id = "btn">Get Data</button>
+    <div id = "result"></div>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', getData);
+
+        function getData() {
+            const base_url = 'https://rickandmortyapi.com/api/character/';
+
+            fetch(base_url)
+
+            .then(response => response.json())
+  
+            .then(data => {
+                const characters = data.results;
+                //console.log(typeof characters);
+                characters.forEach(element => {
+                    document.getElementById('character').insertAdjacentHTML('beforeend', `<ul> <li onclick='result("${element.url}")'>${element.name}</li></ul>`)
+                });
+              
+            })
+            .catch(error => {
+
+                document.getElementById('result').innerHTML = `<h1>Something went wrong with the request</h1>`;
+                var p = document.createElement('p');
+                p.innerText = `<p>${error}</p>`
+                document.getElementById('result').appendChild(p);
+            });
+        }
+
+        const result = (url) => {
+          fetch(url)
+          .then(response => response.json())
+          .then(element => {
+            document.getElementById('result').innerHTML ='' 
+            document.getElementById('result').insertAdjacentHTML('beforeend', `<h2>Characters Name: ${element.name}</h2> <h3 style="padding-left: 40px">Status: ${element.status}</h3> <img style="padding-left: 40px" src= "${element.image}"/> `)
+          })
+          .catch(error => {
+            document.getElementById('result').innerHTML = `<h1>Something went wrong with the request</h1>`;
+            var p = document.createElement('p');
+            p.innerText = `<p>${error}</p>`
+            document.getElementById('result').appendChild(p);
+            });
+        }
+    </script>
+    
+</body>
+</html>
