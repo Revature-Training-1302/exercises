@@ -1,0 +1,38 @@
+/*
+* Abderrahim bahia
+* API Exercise Part II
+* Sending requests using Fetch
+ */
+
+div1{
+    display: block;
+    text-align: center;
+}
+
+div2 {
+    display: block;
+    text-align: left;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button{
+    margin-left: 10px;
+}
+
+input{
+    text-align: center;
+}
+
+span {
+    font-weight: bold;
+}
+
+li {
+    text-align: left;
+}
+
+
