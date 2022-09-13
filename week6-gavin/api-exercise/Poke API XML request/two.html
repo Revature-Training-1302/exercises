@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gavin's PokeDex</title>
+    <link rel = 'stylesheet' href = 'two.css'/>
+</head>
+<body>
+
+    <button id = 'btn'>Get Pokemon</button>
+
+    <div id = 'command'>
+        <input id = 'term' type = 'text' placeholder = 'Enter pokemon name'>
+    </div>
+
+
+    <div id = 'img_display'>
+        <img id = 'update_img' src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg'/>
+    </div>
+
+
+    <div id = 'data_display'>
+        <p id = 'update_name'>Name: Ditto</p>
+        <p id = 'update_weight'>Weight: 40</p>
+        <p id = 'update_type'>Type: normal</p>
+    </div>
+
+
+    <script>
+
+        let button = document.getElementById('btn');
+        button.addEventListener('click', sendRequest);
+        
+        console.log(query);
+
+        function sendRequest() {
+            const base_url = `https://pokeapi.co/api/v2/pokemon/`;
+
+            let request = new XMLHttpRequest();
+
+            var query = document.getElementById('term').value;
+
+            request.open('GET', `${base_url}${query}`, true);
+
+            request.onreadystatechange = function() {
+
+                if(this.readyState == 4 && this.status == 200) {
+
+                    var pokemon = JSON.parse(this.responseText);
+
+                    
+                    document.getElementById('update_img').setAttribute('src', pokemon.sprites.other.dream_world.front_default);
+                    document.getElementById('update_name').innerHTML = `Name: ${pokemon.name}`;
+                    document.getElementById('update_weight').innerHTML = `Weight: ${pokemon.weight}`;
+                    document.getElementById('update_type').innerHTML = `Type: ${pokemon.types[0].type.name}`
+                    
+                }
+            }
+
+            request.send();
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gavin's Fetch PokeDex</title>
+    <link rel = "stylesheet" href = "style.css"/>
+</head>
+<body>
+    <input id = 'term' type = 'text' placeholder="pokemon name">
+    <button id = 'btn'>Get Pokemon</button>
+    <div id = 'result'>
+        <img id = 'update_img' src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg'/>
+        <h2 id = 'update_name'>Name: ditto</h2>
+        <h3 id = 'update_weight'>Weight: 40</h3>
+        <h3 id = 'update_type'>Type: normal</h3>
+
+    </div>
+
+    <script>
+        const search_term = document.getElementById('term')
+        const search_btn = document.getElementById('btn')
+        
+        const getPokemonData = async query => {
+            const url = `https://pokeapi.co/api/v2/pokemon/${query}`
+            const response = await fetch(url)
+            
+            if(response.status == 404 || response.statusText == 'Not Found') {
+                document.getElementById(update_name).innerHTML = 'Not Found'
+                return
+            }
+
+            const pokemon = await response.json()
+            console.log(pokemon)
+
+            document.getElementById('update_img').setAttribute('src', pokemon.sprites.other.dream_world.front_default)
+            document.getElementById('update_name').innerHTML = `Name: ${pokemon.name}`
+            document.getElementById('update_weight').innerHTML = `Weight: ${pokemon.weight}`
+            document.getElementById('update_type').innerHTML = `Type: ${pokemon.types[0].type.name}`
+
+        }
+
+        search_btn.addEventListener('click', () => getPokemonData(search_term.value))
+    </script>
+</body>
+</html>
