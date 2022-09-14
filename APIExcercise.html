@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'btn'>Get Data</button>
+    <div id = 'result'></div>
+
+    <script>
+        let button = document.getElementById('btn');
+        button.addEventListener('click', sendRequest);
+
+        function sendRequest() {
+            // the base url is the prefix for all of the different urls
+            const base_url = 'https://mhw-db.com';
+
+            // request
+            let request = new XMLHttpRequest();
+
+            // open our connection:
+            request.open('GET', `${base_url}/items`, true);
+
+            request.onreadystatechange = function() {
+                // status is status code that we return from the request
+                // "this" is referring to the variable that called this function, (in this case request)
+                if(this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    // parse out the response
+                    console.log(typeof this.responseText);
+
+                    // first we convert the response from string to a JS object
+                    var parsedResponse = JSON.parse(this.responseText);
+                    console.log(parsedResponse);
+                    console.log(typeof parsedResponse);
+
+                    // now we get the characters from this response:
+                  //  var items = parsedResponse.results;
+
+                   // console.log(items);
+                    // iterate through the characters and construct some HTML code as we go
+                    let htmlText = '';
+                    for(const item of parsedResponse) {
+                        htmlText += `<h1>Id: ${item.id}</h1>`;
+                        htmlText += `<h2>${item.name}</h2>`;
+                        htmlText += `<h3>Description: ${item.description}</h3>`;
+                        htmlText += `<h4>Rarity: ${item.rarity}</h4>`;
+                    }
+                    document.getElementById('result').innerHTML = htmlText;
+
+
+                }
+            }
+
+            request.send();
+        }
+    </script>
+</body>
+</html>

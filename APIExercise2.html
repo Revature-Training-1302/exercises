@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "btn">Get Information</button>
+    <div id = "result"></div>
+
+    <script>
+        let button = document.getElementById("btn");
+        button.addEventListener("click", getInfo);
+
+        function getInfo(){
+            console.log("This is being called");
+            const baseUrl = "https://mhw-db.com";
+
+            // fetch
+            fetch(`${baseUrl}/items`)
+            .then(response => response.json())
+            .then(data => {
+                //var items = data.result;
+
+                let htmlText = "";
+                
+                for(const i of data) {
+                    htmlText += `<h1>Id: ${i.id}</h1>`;
+                    htmlText += `<h2>${i.name}</h2>`;
+                    htmlText += `<h3>Description: ${i.description}</h3>`;
+                    htmlText += `<h4>Rarity: ${i.rarity}</h4>`;
+                }
+
+                document.getElementById("result").innerHTML = htmlText;
+
+            })
+
+        }
+        
+    </script>
+    
+</body>
+</html>
