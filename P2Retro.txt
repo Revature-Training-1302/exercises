@@ -1,0 +1,30 @@
+Project 2 retro 
+
+What feature/aspect of your project are you most proud of?
+- I am the most proud of getting the cart/checkout feature working. We were stuck on this feature for many hours. 
+We were only able to return the current cart instead of getting a new cart when we selected the checkout button. This was probably
+the problem we spent the most time on in the project so it was nice to get it working.
+
+What are some challenges you faced while working on the project?
+- I would say planning was one of the challenges we faced. We had a hard time trying to figure out the relationships for the entities
+at first before we got help with it. So we probably spent a couple days writing the backend for something we didn't use. 
+
+What would you work on if you had another week on project 2?
+- If I had anothe week to work on project 2 I would get AWS working. We close to getting it working but we were missing some sort of connection 
+between AWS and the backend. The web page would load correctly but any time we tried to put in data we would get errors. I would also style 
+our web page. We only had time to put in a few stylings and worried more about the functionality of the web page instead.
+
+What would you do differently if you could start the project over?
+- I think the one thing my group would do if we had to start over would be to plan more carefully. We wasted a couple of days on the backend 
+of a project we wouldn't use. If we would've been able to figure out the relationships between entities right away that would've saved us some
+time.
+
+What do you wish you knew at the start of the project (either about the development process or the technologies used)?
+- I wish I knew more about AWS. As I stated earlier, we had a problem with some sort of connection when trying to host the web page. We were 
+able to get the web page to load but it would always output errors when we tried to enter data. If I knew more about AWS then perhaps it would've 
+been easy to diagnose the issue we had. I'm sure it will become easier with more experience but we probably spent a whole night just trying to figure
+out what our issue was and had no success in solving it.
+
+How can you apply these lessons to project 3?
+- These lessons can be applied to lesson 3 by making sure that planning is done very carefully and thoughtfully. This will save time later on in the project,
+instead of having to go back and try to fix issues that shouldn't have been there in the first place. 
